@@ -1,0 +1,129 @@
+/* CSS Document by Dieter Schneider for www.csstemplateheaven.com 2007*/
+
+* {margin: 0; padding: 0;}
+
+/*-------------------------------------- SITE STRUCTURE -------------------------------*/
+
+body {
+	background: #fff url(images/main_bg.jpg) no-repeat;
+	font-size: 62.5%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#headerwrapper {
+	width: 505px;
+	height: 180px;
+	margin-top: 265px;
+	margin-left: 120px;
+}
+
+#header_left {
+	width: 255px;
+	float: left;
+}
+
+#header_right {
+	float: right;
+	width: 185px;
+	padding-top: 20px;
+	font-size: 1.2em;
+}
+
+#main_content {
+	width: 580px;
+	margin-top: 75px;
+	clear: both;
+	margin-left: 100px;
+	font-size: 1.2em;
+}
+
+#footer {
+	width: 580px;
+	margin-top: 10px;
+	clear: both;
+	margin-left: 100px;
+	text-align: center;
+}
+
+/*-------------------------------------- NAVIGATION -------------------------------*/
+
+#navlist
+{
+border-bottom: 1px solid #CCCCCC;
+width: 175px;
+}
+
+#navlist li
+{
+list-style: none;
+margin: 0;
+padding: 0.25em;
+border-top: 1px solid #CCCCCC;
+}
+
+#navlist li a {
+	text-decoration: none;
+	color: #999900;
+}
+
+/*-------------------------------------- TEXT FORMATTING -------------------------------*/
+
+p {
+	margin: 20px;
+	color: #666666;
+}
+
+h1 {
+	font-size: 3em;
+	font-style: italic;
+	color: #CCCCCC;
+	border-bottom: 1px dotted #CCC;
+	padding-bottom: 8px;
+}
+
+h2 {
+	margin-left: 20px;
+	color: #999900;
+	font-size: 1.2em;
+	background: url(images/date.gif) no-repeat;
+	padding-top: 1px;
+	padding-left: 5px;
+	height: 26px;
+}
+
+h3 {}
+
+.heading_color {
+	color: #CCCC99;
+	font-style: normal;
+}
+
+blockquote {
+	font-size: 1.6em;
+	font-style: italic;
+	color: #999999;
+	background: url(images/quote.gif) no-repeat;
+	padding-top: 5px;
+	padding-left: 5px;
+	margin-top: 10px;
+}
+
+.quote_author {
+	text-align: right;
+	font-size: 0.7em;
+	font-style: italic;
+	color: #CCCC99;
+	font-weight: bold;
+	margin: 0px;
+}
+
+.date {
+	font-size: .6em;
+	color: #CCCCCC;
+	
+}
+
+a:link {color: #999900}     /* unvisited link */
+a:visited {color: #999900}  /* visited link */
+a:hover {color: #993300}   /* mouse over link */
+a:active {color: #999900}   /* selected link */

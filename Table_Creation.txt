@@ -1,0 +1,72 @@
+CREATE TABLE AGENT ( 
+  `f_name` varchar(50) NOT NULL,
+  `l_name` varchar(50) default NULL,
+  `agent_id` int(5) NOT NULL,
+  `phone` varchar(100) default NULL,
+`sex` varchar(2) NOT NULL,`dob` DATE NOT NULL,`address` varchar(100) NOT NULL,
+  PRIMARY KEY (agent_id)
+) ;
+
+CREATE TABLE CUSTOMER ( 
+  `f_name` varchar(50) NOT NULL,
+`l_name` varchar(50) default NULL,
+  `cust_id` int(5) NOT NULL,
+  `phone` varchar(50) default NULL,`sex` varchar(1),
+  `dob` DATE default NULL,
+`address` varchar(200) NOT NULL,
+  `agent_id` int(5) NOT NULL,
+  PRIMARY KEY (cust_id), FOREIGN KEY (agent_id) references AGENT(agent_id) ON DELETE CASCADE ON UPDATE CASCADE
+) ; 
+
+CREATE TABLE NOMINEE ( 
+  `name` varchar(50) NOT NULL,
+  `sex` varchar(1) NOT NULL,
+`dob` DATE NOT NULL,`relationship` varchar(20) NOT NULL,cust_id int(5) NOT NULL,
+  FOREIGN KEY (cust_id) REFERENCES CUSTOMER(cust_id) ON DELETE CASCADE ON UPDATE CASCADE
+) ;
+
+CREATE TABLE POLICY ( 
+  `policy_no` int(5),
+  `issued_date` DATE NOT NULL,
+  `cust_id` int(5) NOT NULL,
+  `type_no` int(5) NOT NULL,
+`maturity` DATE DEFAULT NULL,
+  PRIMARY KEY (policy_no), FOREIGN KEY (cust_id) REFERENCES CUSTOMER(cust_id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY(type_no) REFERENCES INSURANCE_TYPE(type_no) ON DELETE CASCADE ON UPDATE CASCADE
+); 
+
+CREATE TABLE INSURANCE_TYPE ( 
+  `type_no` int(5),
+  `rules` TEXT default NULL,
+  PRIMARY KEY (type_no)
+) ; 
+
+CREATE TABLE PAYMENT ( 
+  `pay_no` int(5),
+  `premium` int(10) NOT NULL,
+  `sum_assured` int(10) NOT NULL,
+  `mode_of_payment` int(2) NOT NULL,
+  `pol_no` int(5) NOT NULL,
+  PRIMARY KEY (pay_no), FOREIGN KEY(pol_no) REFERENCES POLICY(policy_no) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE VEHICLE_DETAILS (
+  `lic_plate` varchar(20),
+  `model` varchar(20) default NULL,
+  `type` varchar(20) default NULL,
+  `color` varchar(20) default NULL,
+  `pol_no` int(5) NOT NULL,
+  `year` int(4),
+  PRIMARY KEY (lic_plate), FOREIGN KEY(pol_no) REFERENCES POLICY(policy_no) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE CLAIM (
+`report_no` int(8),
+  `claim_date` DATE NOT NULL,
+  `accident_date` DATE NOT NULL,
+  `claim_amount` int(8) NOT NULL,
+  `pol_no` int(5) NOT NULL,
+  PRIMARY KEY (report_no), FOREIGN KEY(pol_no) REFERENCES POLICY(policy_no) ON DELETE CASCADE ON UPDATE CASCADE
+); 
+
+

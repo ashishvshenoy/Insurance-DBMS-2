@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Web Developer Express 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "InsuranceDatabase", "..\..\WebSites\InsuranceDatabase\", "{D669E5B9-5F9F-4C51-ACC6-53F18F0CAAA8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/InsuranceDatabase"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\InsuranceDatabase\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\InsuranceDatabase\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/InsuranceDatabase"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\InsuranceDatabase\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\InsuranceDatabase\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55612"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D669E5B9-5F9F-4C51-ACC6-53F18F0CAAA8}.Debug|.NET.ActiveCfg = Debug|.NET
+		{D669E5B9-5F9F-4C51-ACC6-53F18F0CAAA8}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
